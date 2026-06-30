@@ -1,19 +1,45 @@
-# dependencies
+# Node / frontend dependencies
 node_modules/
 
 # Next.js
 .next/
 out/
 
-# production
+# .NET build output
+bin/
+obj/
+publish/
+.build-check/
+
+# Production/build output
 build/
 dist/
 
-# local env files
-.env
-.env*.local
+# Visual Studio / IDE state
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# logs
+# Local app data
+**/App_Data/
+*.db
+*.db-shm
+*.db-wal
+
+# Secrets and local configuration
+.env
+.env.*
+.env*.local
+!.env*.example
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Logs
 logs/
 run_logs/
 *.log
@@ -22,13 +48,22 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# caches
+# Caches
 .eslintcache
 .turbo/
 .vercel/
 
-# OS/editor
-.DS_Store
+# Test and coverage output
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+packages/
+
+# OS files
 Thumbs.db
-.vscode/
-.idea/
+Desktop.ini
+.DS_Store
