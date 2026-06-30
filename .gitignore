@@ -1,0 +1,43 @@
+# Build output
+bin/
+obj/
+out/
+publish/
+.build-check/
+
+# Visual Studio / IDE state
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local app data
+**/App_Data/
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Test and coverage output
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+packages/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
