@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "AuditWise AI": {
+    "AuditWiseAI": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

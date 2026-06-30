@@ -19,9 +19,22 @@ Display name: `AuditWise AI`
 - SignalR audit updates and optional webhook dispatch.
 - Next.js frontend for uploading audits and reviewing results.
 
+## Architecture
+
+```text
+AuditWiseAI/
+  Domain/           Core audit, document, and policy records.
+  Models/           API request and response contracts.
+  Application/      Audit workflows, document chunking, policy retrieval, and caching.
+  Infrastructure/   LiteDB persistence, file/OCR handling, and LLM provider adapters.
+  Integrations/     External callbacks such as webhooks.
+  Realtime/         SignalR hub and audit update notifications.
+  Program.cs        Minimal API composition root and endpoint mapping.
+```
+
 ## Requirements
 
-- .NET SDK matching the project target framework in `AuditWise AI/AuditWise AI.csproj`.
+- .NET SDK matching the project target framework in `AuditWiseAI/AuditWiseAI.csproj`.
 - Node.js and npm for the frontend.
 - Optional: `GROQ_API_KEY` for Groq-backed reasoning.
 - Optional: `OPENAI_API_KEY` for OpenAI embeddings/reasoning.
@@ -31,8 +44,8 @@ Display name: `AuditWise AI`
 From the repository root:
 
 ```powershell
-dotnet restore "AuditWise AI/AuditWise AI.csproj"
-dotnet run --project "AuditWise AI/AuditWise AI.csproj" --urls http://localhost:5055
+dotnet restore AuditWiseAI/AuditWiseAI.csproj
+dotnet run --project AuditWiseAI/AuditWiseAI.csproj --urls http://localhost:5055
 ```
 
 Health check:
@@ -100,4 +113,4 @@ npm run lint
 
 ## Notes
 
-Local runtime data is stored under `AuditWise AI/App_Data/` and is intentionally ignored by Git. Do not commit API keys, local database files, build output, dependencies, or IDE state.
+Local runtime data is stored under `AuditWiseAI/App_Data/` and is intentionally ignored by Git. Do not commit API keys, local database files, build output, dependencies, or IDE state.

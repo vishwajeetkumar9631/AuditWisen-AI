@@ -5,14 +5,14 @@ AuditWise AI is a .NET Minimal API prototype for an enterprise compliance audit 
 ## Run
 
 ```powershell
-dotnet run --project "AuditWise AI.csproj" --urls http://localhost:5055
+dotnet run --project AuditWiseAI.csproj --urls http://localhost:5055
 ```
 
 To enable Groq-backed LLM chunking and audit reasoning, set a Groq API key before starting the API:
 
 ```powershell
 $env:GROQ_API_KEY = "your-groq-api-key"
-dotnet run --project "AuditWise AI.csproj" --urls http://localhost:5055
+dotnet run --project AuditWiseAI.csproj --urls http://localhost:5055
 ```
 
 The default LLM provider is Groq using `llama-3.3-70b-versatile` at `https://api.groq.com/openai/v1`.
